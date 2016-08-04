@@ -1,9 +1,9 @@
-#include "../lib/imagelib.h"
+#include "../imagelib/imagelib.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 Pixel_rgb *get_pixel(Image_rgb *image, int x, int y) {
-  /* 
+  /*
    * Acá vean los casos borde!
    */
   return &image->pixels[x][y];
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
    */
   write_image_rgb(argv[2], image);
 
-  /* 
+  /*
    * OJO: en el ejemplo no se libera memoria, esta es TU pega :)
    */
 

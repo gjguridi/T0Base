@@ -2,9 +2,9 @@
 #include <string.h>
 #include "imagelib.h"
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb/stb_image.h"
+#include "stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb/stb_image_write.h"
+#include "stb_image_write.h"
 
 const char *get_filetype(const char *filename) {
   const char *dot = strrchr(filename, '.');
@@ -49,7 +49,7 @@ void write_image_rgb(char const *path, Image_rgb *image) {
 
   int size = image->width * image->height * 3;
   uint8_t *data = calloc(size, sizeof(uint8_t));
-  
+
   unsigned long index = 0;
   for (int y = 0; y < image->height; y++) {
     for (int x = 0; x < image->width; x++) {
