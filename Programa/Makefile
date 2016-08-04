@@ -69,7 +69,7 @@ $(PROGRAMS): $$(filter obj/$$@/% $(foreach i, $(COMMON), obj/$(i)/%), $(OBJ))
 
 # Regla que elimina todo registro de compilación que se haya hecho
 clean: cleanobj cleanexe
-	@echo "done cleaning"
+	@rm -rf obj && echo "done cleaning"
 
 # Regla que elimina la versión anterior compilada
 # "rm" para unix, "del" para windows. Eres libre de borrar el que no te sirva
